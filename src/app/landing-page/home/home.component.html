@@ -1,1 +1,36 @@
-<p>home works!</p>
+<div class="main-catainer">
+  <div class="slider">
+    <header><b>FIND</b> the right motorcycle for you!</header>
+    <div class="slides">
+      <div
+        class="slide"
+        *ngFor="let img of images; let i = index"
+        [class.active]="i === currentSlide"
+      >
+        <img [src]="img" alt="Image {{ i + 1 }}" />
+      </div>
+    </div>
+    <!-- <div class="controls">
+      <button (click) ="prevSlide()">Previous</button>
+      <button (click)="nextSlide()">Next</button>
+    </div> -->
+  </div>
+
+  <div class="card" >
+    <div *ngFor="let card of cards">
+      <mat-card class="example-card" appearance="outlined">
+        <img [src]="card.image" alt="Photo of a Shiba Inu" />
+        <mat-card-content>
+          <a>{{ card.title }}</a>
+          <p>{{ card.price }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  
+  
+</div>

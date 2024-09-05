@@ -11,7 +11,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   declarations: [LoginComponent, HomeComponent, NavbarComponent],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+   
   ]
 })
 export class LandingPageModule { }

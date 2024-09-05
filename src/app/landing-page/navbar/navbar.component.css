@@ -1,5 +1,36 @@
 mat-toolbar {
+  
   padding: 0rem 4rem;
+  position: fixed; /* Make the toolbar fixed */
+  top: 0;          /* Align it to the top of the page */
+  width: 100%;     /* Ensure it takes the full width */
+  z-index: 1000;   /* Make sure it stays on top of other elements */
+  background-color: #ffffff; /* Set background color (optional) */
+  
+  /* Optional shadow for aesthetics */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .title{
+    font-size: 1.2rem;
+    margin-left: .7rem;
+  }
+
+  .burger-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .function-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+   
+  }
 
   .button-5 {
     align-items: center;
@@ -12,7 +43,7 @@ mat-toolbar {
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     justify-content: center;
  
@@ -31,8 +62,9 @@ mat-toolbar {
 
   .button-5:hover,
   .button-5:focus {
-    background-color: #fb8332;
+    background-color: #EBF4F6;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: black;
   }
 
   .button-5:hover {
@@ -47,5 +79,5 @@ mat-toolbar {
 }
 
 .example-spacer {
-  flex: 1 1 auto;
+  flex: 2 1 auto;
 }
