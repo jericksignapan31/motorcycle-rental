@@ -1,0 +1,27 @@
+<div class="main-container">
+    <div class="header">
+        <span><h4>Get Motorcycle</h4></span>
+        <span><mat-form-field class="example-full-width">
+            <mat-label>Search</mat-label>
+            <input matInput>
+          </mat-form-field></span>
+    </div>
+
+    <div>
+        <div class="card" >
+            <div *ngFor="let card of cards">
+              <mat-card class="example-card" appearance="outlined">
+                <img [src]="card.image" alt="Photo of a Shiba Inu" />
+                <mat-card-content>
+                  <a>{{ card.title }}</a>
+                  <p>{{ card.price }}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+    </div>
+</div>

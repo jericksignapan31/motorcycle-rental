@@ -1,0 +1,31 @@
+.main-container {
+    display: flex;
+    height: 50vh;
+    column-gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 7rem 6rem;
+    background-color: #f6f8f9;
+    flex-direction: row;
+    align-content: center;
+  }
+  
+  .left-card {
+    width: 330px;
+    height: 296px;
+  }
+  
+  .right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    height: 50vh;
+
+  }
+  
+ 
+  .right-content button {
+    margin-top: 20px;
+  }
+  

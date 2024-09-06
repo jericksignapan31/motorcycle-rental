@@ -10,6 +10,8 @@ import { RegisterComponent } from './landing-page/register/register.component';
 import { NavbarComponent } from './landing-page/navbar/navbar.component';
 import { HomeComponent } from './landing-page/home/home.component';
 import { FooterComponent } from './landing-page/footer/footer.component';
+import { AboutComponent } from './landing-page/about/about.component';
+import { GetMotorcycleComponent } from './landing-page/get-motorcycle/get-motorcycle.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { FooterComponent } from './landing-page/footer/footer.component';
     RegisterComponent,
     NavbarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    GetMotorcycleComponent
   ],
   imports: [
     BrowserModule,
