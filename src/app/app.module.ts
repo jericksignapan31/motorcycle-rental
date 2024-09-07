@@ -12,6 +12,10 @@ import { HomeComponent } from './landing-page/home/home.component';
 import { FooterComponent } from './landing-page/footer/footer.component';
 import { AboutComponent } from './landing-page/about/about.component';
 import { GetMotorcycleComponent } from './landing-page/get-motorcycle/get-motorcycle.component';
+import { ContactComponent } from './landing-page/contact/contact.component';
+import { ButtonModule } from 'primeng/button';
+import { PrimeModule } from './prime-module';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
 
 @NgModule({
@@ -24,12 +28,15 @@ import { GetMotorcycleComponent } from './landing-page/get-motorcycle/get-motorc
     HomeComponent,
     FooterComponent,
     AboutComponent,
-    GetMotorcycleComponent
+    GetMotorcycleComponent,
+    ContactComponent,
+    AdminPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    PrimeModule,
   ],
   providers: [
     provideAnimationsAsync()

@@ -1,1 +1,48 @@
-<p>register works!</p>
+<div class="main-conatiner">
+  <header>REGISTER NOW</header>
+  <form class="form">
+    
+    <div class="card flex justify-content-center">
+        <p-floatLabel>
+            <input pInputText id="Firstname" />
+            <label for="firstname">Firstname</label>
+        </p-floatLabel>
+    </div>
+
+    <div class="card flex justify-content-center">
+        <p-floatLabel>
+            <input pInputText id="Lastname"/>
+            <label for="lastname">Lastname</label>
+        </p-floatLabel>
+    </div>
+
+    <div class="card flex justify-content-center"> 
+      <p-floatLabel>
+        <input pInputText id="username" />
+        <label for="Email">Email</label>
+      </p-floatLabel>
+    </div>
+
+    <p-password [(ngModel)]="value" placeholder="Password">
+        <ng-template pTemplate="header">
+            <h6>Pick a password</h6>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <p-divider></p-divider>
+            <p class="mt-2">Suggestions</p>
+            <ul class="pl-2 ml-2 mt-0" style="line-height: 1.5">
+                <li>At least one lowercase</li>
+                <li>At least one uppercase</li>
+                <li>At least one numeric</li>
+                <li>Minimum 8 characters</li>
+            </ul>
+        </ng-template>
+    </p-password>
+    
+
+    
+    <p-button label="Submit" icon="pi pi-user" styleClass="w-10rem mx-auto" />
+
+   
+  </form>
+</div>

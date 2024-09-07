@@ -1,0 +1,29 @@
+.main-conatiner {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: .6rem;
+
+  header {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 2rem;
+  }
+
+  .form {
+    min-width: 150px;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 1.5rem;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+}
