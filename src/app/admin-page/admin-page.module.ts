@@ -10,6 +10,8 @@ import { UserManagementComponent } from './layout/user-management/user-managemen
 import { BrandsComponent } from './layout/brands/brands.component';
 import { VerifyUserComponent } from './layout/verify-user/verify-user.component';
 import { SettingComponent } from './layout/setting/setting.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from '../app.component';
 
 
 
@@ -27,7 +29,9 @@ import { SettingComponent } from './layout/setting/setting.component';
   ],
   imports: [
     CommonModule,
-    PrimeModule
-  ]
+    PrimeModule,
+    BrowserModule 
+  ],
+  bootstrap: [AppComponent]
 })
 export class AdminPageModule { }
