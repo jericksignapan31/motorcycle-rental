@@ -1,30 +1,69 @@
-<!-- <div class="admin-layout">
-   
-    <div class="main-container">
-        <li><a routerLink="/admin/dashboard">Dashboard</a></li>
-      <div class="content-area">
-        <router-outlet></router-outlet>
-      </div>
+<mat-toolbar color="primary">
+  <div class="header-container">
+    <div class="left-section">
+      <img [src]="logo" alt="logo" (click)="drawer.toggle()" />
+
+      <span class="company-name">Motorcycle rental</span>
+    </div>
+
+    <!-- Right side: Avatar and Logout -->
+
+    <div class="right-section">
+      <p-avatar label="A" styleClass="mr-2" shape="circle"></p-avatar>
+      <span>admin</span>
+
+      <mat-icon aria-hidden="false">login</mat-icon>
+      <span>Logout</span>
     </div>
   </div>
-   -->
+</mat-toolbar>
 
-   <mat-toolbar color="primary">
-    <span>My Application Header</span>
-  </mat-toolbar>
-  
-  <mat-drawer-container class="example-container" autosize>
+<mat-drawer-container class="example-container" autosize>
+    <!-- Sidebar Drawer -->
+    <mat-drawer #drawer class="sidenav" mode="side" opened>
       
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Auto-resizing sidenav</p>
-      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+  
+      <!-- Navigation Links -->
+      <mat-nav-list>
+        <a mat-list-item routerLink="/admin/dashboard" routerLinkActive="active">
+          <mat-icon>dashboard</mat-icon>
+          <span class="nav-text">Dashboard</span>
+        </a>
+        <a mat-list-item routerLink="/admin/motors" routerLinkActive="active">
+          <mat-icon>directions_car</mat-icon>
+          <span class="nav-text">Motors</span>
+        </a>
+        <a mat-list-item routerLink="/admin/blocklist" routerLinkActive="active">
+          <mat-icon>block</mat-icon>
+          <span class="nav-text">Blocklist</span>
+        </a>
+        <a mat-list-item routerLink="/admin/tracking" routerLinkActive="active">
+          <mat-icon>track_changes</mat-icon>
+          <span class="nav-text">Tracking</span>
+        </a>
+        <a mat-list-item routerLink="/admin/admin-users" routerLinkActive="active">
+          <mat-icon>people</mat-icon>
+          <span class="nav-text">Admin/Users</span>
+        </a>
+        <a mat-list-item routerLink="/admin/brands" routerLinkActive="active">
+          <mat-icon>branding_watermark</mat-icon>
+          <span class="nav-text">Brands</span>
+        </a>
+        <a mat-list-item routerLink="/admin/verify-users" routerLinkActive="active">
+          <mat-icon>verified_user</mat-icon>
+          <span class="nav-text">Verify Users</span>
+        </a>
+        <a mat-list-item routerLink="/admin/settings" routerLinkActive="active">
+          <mat-icon>settings</mat-icon>
+          <span class="nav-text">Settings</span>
+        </a>
+      </mat-nav-list>
     </mat-drawer>
   
+    <!-- Main Content -->
     <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
-      </button>
+      <!-- Main content or routed views will appear here -->
+      <router-outlet></router-outlet>
     </div>
-  
   </mat-drawer-container>
   

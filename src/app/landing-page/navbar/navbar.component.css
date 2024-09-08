@@ -1,18 +1,20 @@
 mat-toolbar {
   padding: 0rem 4rem;
-  position: fixed; 
-  top: 0;         
-  width: 100%;     
-  z-index: 1000;   
-  background-color: #ffffff; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff;
+  -webkit-box-shadow: -5px 7px 13px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 7px 13px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px 7px 13px -9px rgba(0, 0, 0, 0.75);
 
-  .title{
+  .title {
     font-size: 1.2rem;
-    margin-left: .7rem;
+    margin-left: 0.7rem;
   }
 
-  .burger-center{
+  .burger-center {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -20,19 +22,18 @@ mat-toolbar {
     gap: 1rem;
   }
 
-  .function-btn{
+  .function-btn {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-   
   }
 
   .button-5 {
     align-items: center;
     background-clip: padding-box;
-    background-color: #56565B;
+    background-color: #56565b;
     border: 1px solid transparent;
     border-radius: 0.25rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -43,9 +44,9 @@ mat-toolbar {
     font-size: 12px;
     font-weight: 600;
     justify-content: center;
- 
+
     margin: 0;
-   
+
     padding: calc(0.575rem - 1px) calc(1.5rem - 1px);
     position: relative;
     text-decoration: none;
@@ -59,7 +60,7 @@ mat-toolbar {
 
   .button-5:hover,
   .button-5:focus {
-    background-color: #EBF4F6;
+    background-color: #ebf4f6;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     color: black;
   }
@@ -69,7 +70,7 @@ mat-toolbar {
   }
 
   .button-5:active {
-    background-color: #56565B;
+    background-color: #56565b;
     box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
     transform: translateY(0);
   }
@@ -78,4 +79,3 @@ mat-toolbar {
 .example-spacer {
   flex: 2 1 auto;
 }
-
