@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { Sidebar } from 'primeng/sidebar';
 
 @Component({
   selector: 'app-admin-page',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './admin-page.component.css'
 })
 export class AdminPageComponent {
+  sidebarVisible: boolean = false;
+  @ViewChild('sidebarRef') sidebarRef!: Sidebar;
 
+  closeCallback(e:any): void {
+      this.sidebarRef.close(e);
+  }
 }

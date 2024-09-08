@@ -13,11 +13,11 @@
 
         <div class="card flex justify-content-center">
             <p-floatLabel>
-                <p-password [(ngModel)]="value" [feedback]="false" />
+                <p-password />
                 <label for="password">Password</label>
             </p-floatLabel>
         </div>
-        <p-button label="Login" icon="pi pi-user" styleClass="w-10rem mx-auto" />
+        <p-button label="Login" icon="pi pi-user" styleClass="w-10rem mx-auto" (click)="login()" />
 
         <p>Don't have an account? <a href=""> Register here!</a></p>
 
@@ -27,4 +27,6 @@
 
 
   </div>
+
+
   

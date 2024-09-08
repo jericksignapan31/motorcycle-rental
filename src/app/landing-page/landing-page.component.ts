@@ -8,5 +8,9 @@ import { LoginComponent } from './login/login.component';
   styleUrl: './landing-page.component.css'
 })
 export class LandingPageComponent {
- 
+  visible: boolean = false;
+
+    showDialog() {
+        this.visible = true;
+    }
 }

@@ -8,11 +8,7 @@ const routes: Routes = [
   path: 'landing-page',
   component: LandingPageComponent,
   children: [
-    {
-      path: 'activities',
-      title: 'Activities',
-      component: LandingPageComponent
-    }
+   
     
   ]
 }

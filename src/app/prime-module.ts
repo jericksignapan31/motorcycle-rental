@@ -10,6 +10,8 @@ import { BadgeModule } from 'primeng/badge';
 import { PasswordModule } from 'primeng/password';
 import { MenubarModule } from 'primeng/menubar';
 import { DividerModule } from 'primeng/divider';
+import { SidebarModule } from 'primeng/sidebar';
+import { DialogModule } from '@angular/cdk/dialog';
 
 @NgModule({
   exports: [
@@ -23,7 +25,9 @@ import { DividerModule } from 'primeng/divider';
     AvatarModule,
     RippleModule,
     CommonModule,
-    DividerModule
+    DividerModule,
+    SidebarModule,
+    DialogModule 
   ],
 })
 export class PrimeModule {}

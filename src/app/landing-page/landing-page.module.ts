@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { GetMotorcycleComponent } from './get-motorcycle/get-motorcycle.component';
 import { ContactComponent } from './contact/contact.component';
 import { PrimeModule } from '../prime-module';
+import { AdminRoutingModule } from '../admin-page/admin-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,6 @@ import { PrimeModule } from '../prime-module';
     GetMotorcycleComponent,
     ContactComponent,
   ],
-  imports: [CommonModule, MaterialModule,PrimeModule],
+  imports: [CommonModule, MaterialModule,PrimeModule,AdminRoutingModule],
 })
 export class LandingPageModule {}
