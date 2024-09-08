@@ -7,10 +7,5 @@ import { Sidebar } from 'primeng/sidebar';
   styleUrl: './admin-page.component.css'
 })
 export class AdminPageComponent {
-  sidebarVisible: boolean = false;
-  @ViewChild('sidebarRef') sidebarRef!: Sidebar;
-
-  closeCallback(e:any): void {
-      this.sidebarRef.close(e);
-  }
+  showFiller = false;
 }

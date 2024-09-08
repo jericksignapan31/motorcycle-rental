@@ -12,7 +12,8 @@ import { MenubarModule } from 'primeng/menubar';
 import { DividerModule } from 'primeng/divider';
 import { SidebarModule } from 'primeng/sidebar';
 import { DialogModule } from '@angular/cdk/dialog';
-
+import { PanelModule } from 'primeng/panel';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   exports: [
     PasswordModule,
@@ -27,7 +28,9 @@ import { DialogModule } from '@angular/cdk/dialog';
     CommonModule,
     DividerModule,
     SidebarModule,
-    DialogModule 
+    DialogModule ,
+    PanelModule,
+    BrowserAnimationsModule,
   ],
 })
 export class PrimeModule {}

@@ -16,7 +16,6 @@ import { ContactComponent } from './landing-page/contact/contact.component';
 import { ButtonModule } from 'primeng/button';
 import { PrimeModule } from './prime-module';
 import { AdminPageComponent } from './admin-page/admin-page.component';
-import { AdminPageModule } from './admin-page/admin-page.module';
 import { AdminRoutingModule } from './admin-page/admin-routing.module';
 
 
@@ -33,13 +32,13 @@ import { AdminRoutingModule } from './admin-page/admin-routing.module';
     GetMotorcycleComponent,
     ContactComponent,
     AdminPageComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
     PrimeModule,
-    AdminPageModule,
     AdminRoutingModule
   ],
   providers: [

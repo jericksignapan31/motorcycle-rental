@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './layout/header/header.component';
 import { SidenavComponent } from './layout/sidenav/sidenav.component';
+import { PrimeModule } from '../prime-module';
+import { DashboardComponent } from './layout/dashboard/dashboard.component';
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent,
-    SidenavComponent
+    SidenavComponent,
+    DashboardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PrimeModule
   ]
 })
 export class AdminPageModule { }

@@ -10,6 +10,7 @@ import { GetMotorcycleComponent } from './get-motorcycle/get-motorcycle.componen
 import { ContactComponent } from './contact/contact.component';
 import { PrimeModule } from '../prime-module';
 import { AdminRoutingModule } from '../admin-page/admin-routing.module';
+import { SidenavComponent } from '../admin-page/layout/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AdminRoutingModule } from '../admin-page/admin-routing.module';
     AboutComponent,
     GetMotorcycleComponent,
     ContactComponent,
+    SidenavComponent
   ],
   imports: [CommonModule, MaterialModule,PrimeModule,AdminRoutingModule],
 })
