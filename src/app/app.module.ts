@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MaterialModule } from './material-module';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,7 @@ import { ButtonModule } from 'primeng/button';
 import { PrimeModule } from './prime-module';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { AdminRoutingModule } from './admin-page/admin-routing.module';
+import { AdminPageModule } from './admin-page/admin-page.module';
 
 
 @NgModule({
@@ -39,8 +40,10 @@ import { AdminRoutingModule } from './admin-page/admin-routing.module';
     AppRoutingModule,
     MaterialModule,
     PrimeModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    AdminPageModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA], 
   providers: [
     provideAnimationsAsync()
   ],
