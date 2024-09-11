@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
   cards = [
-    { value: 2, label: 'TOTAL BOOKING' },
-    { value: 10, label: 'TOTAL BRANDS' },
-    { value: 10, label: 'TOTAL MOTORS' },
-    { value: 15, label: 'TOTAL MOTOR IMAGES' },
-    { value: 3, label: 'TOTAL ADMIN/USER' }
+    { number: 2, title: 'TOTAL BOOKINGS' },
+    { number: 10, title: 'TOTAL BRANDS' },
+    { number: 10, title: 'TOTAL MOTORS' },
+    { number: 15, title: 'TOTAL MOTOR IMAGES' },
+    { number: 3, title: 'TOTAL ADMIN/USERS' },
+    { number: 15, title: 'TOTAL MOTOR IMAGES' },
+
   ];
 }

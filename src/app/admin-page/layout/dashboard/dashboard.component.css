@@ -1,32 +1,31 @@
-.dashboard-container {
+.card-container {
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
+    height: 89vh;
     justify-content: space-around;
-    gap: 10px;
+    padding: 3rem;
   }
   
-  .dashboard-card {
-    width: 150px;
-    height: 150px;
+  .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 230px;
+    height: 180px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
   }
   
-  .dashboard-card h2 {
-    margin: 0;
-    font-size: 2em;
+  .card-number {
+    font-size: 36px;
+    font-weight: bold;
   }
   
-  .dashboard-card p {
-    margin: 0;
-    font-size: 1.1em;
-    color: #333;
+  .card-title {
+    margin-top: 10px;
+    font-size: 18px;
   }
   
