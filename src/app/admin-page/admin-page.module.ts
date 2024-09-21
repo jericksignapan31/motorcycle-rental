@@ -12,6 +12,8 @@ import { VerifyUserComponent } from './layout/verify-user/verify-user.component'
 import { SettingComponent } from './layout/setting/setting.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from '../app.component';
+import { BookingComponent } from './layout/booking/booking.component';
+import { MaterialModule } from '../material-module';
 
 
 
@@ -25,12 +27,14 @@ import { AppComponent } from '../app.component';
     UserManagementComponent,
     BrandsComponent,
     VerifyUserComponent,
-    SettingComponent
+    SettingComponent,
+    BookingComponent
   ],
   imports: [
     CommonModule,
     PrimeModule,
-    BrowserModule 
+    BrowserModule ,
+    MaterialModule
   ],
   bootstrap: [AppComponent]
 })

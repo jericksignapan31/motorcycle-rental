@@ -11,6 +11,7 @@ import { UserManagementComponent } from './layout/user-management/user-managemen
 import { BrandsComponent } from './layout/brands/brands.component';
 import { VerifyUserComponent } from './layout/verify-user/verify-user.component';
 import { SettingComponent } from './layout/setting/setting.component';
+import { BookingComponent } from './layout/booking/booking.component';
 
 
 
@@ -29,6 +30,7 @@ const routes: Routes = [
       { path: 'brands', component: BrandsComponent },
       { path: 'verify-user', component: VerifyUserComponent },
       { path: 'settings', component: SettingComponent },
+      { path: 'booking', component: BookingComponent },
     ]
   }
 ];

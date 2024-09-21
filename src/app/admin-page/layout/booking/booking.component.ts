@@ -5,40 +5,72 @@ import { MatTableDataSource } from '@angular/material/table';
 
 export interface UserData {
   id: string;
-  model: string;
-  brand: string;
-  motorRegNo: string;
+  name: string;
+  motor: string;
+  startDate: string;
   status: string;
   action: string;
 }
 
 /** Constants used to fill up the data. */
-const MODEL: string[] = [
+const MOTORS: string[] = [
   'Motor A',
   'Motor B',
-
+  'Motor C',
+  'Motor D',
+  'Motor E',
+  'Motor F',
+  'Motor G',
+  'Motor H',
+  'Motor I',
+  'Motor J'
 ];
 
 const STATUSES: string[] = ['Active', 'Inactive', 'Maintenance', 'Pending'];
 
-const BRAND: string[] = [
+const NAMES: string[] = [
   'Maia',
   'Asher',
- 
+  'Olivia',
+  'Atticus',
+  'Amelia',
+  'Jack',
+  'Charlotte',
+  'Theodore',
+  'Isla',
+  'Oliver',
+  'Isabella',
+  'Jasper',
+  'Cora',
+  'Levi',
+  'Violet',
+  'Arthur',
+  'Mia',
+  'Thomas',
+  'Elizabeth'
 ];
 
-const MOTORREG: string[] = [
+const START_DATES: string[] = [
   '2024-01-01',
   '2024-02-15',
-  
+  '2024-03-30',
+  '2024-04-20',
+  '2024-05-10',
+  '2024-06-25',
+  '2024-07-14',
+  '2024-08-05',
+  '2024-09-17',
+  '2024-10-29'
 ];
+
 @Component({
-  selector: 'app-motors',
-  templateUrl: './motors.component.html',
-  styleUrl: './motors.component.css'
+  selector: 'app-booking',
+  templateUrl: './booking.component.html',
+  styleUrls: ['./booking.component.css']
 })
-export class MotorsComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'model', 'brand', 'motorRegNo', 'status', 'action'];
+export class BookingComponent implements OnInit {
+
+  displayedColumns: string[] = ['id', 'name', 'motor', 'startDate', 'status', 'action'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -72,16 +104,16 @@ export class MotorsComponent implements OnInit {
 
 /** Builds and returns a new User. */
 function createNewUser(id: number): UserData {
-  const model = `${MODEL[Math.floor(Math.random() * MODEL.length)]}`;
-  const brand = BRAND[Math.floor(Math.random() * BRAND.length)];
-  const motorRegNo = MOTORREG[Math.floor(Math.random() * MOTORREG.length)];
+  const name = `${NAMES[Math.floor(Math.random() * NAMES.length)]}`;
+  const motor = MOTORS[Math.floor(Math.random() * MOTORS.length)];
+  const startDate = START_DATES[Math.floor(Math.random() * START_DATES.length)];
   const status = STATUSES[Math.floor(Math.random() * STATUSES.length)];
 
   return {
     id: id.toString(),
-    model: model,
-    brand: brand,
-    motorRegNo: motorRegNo,
+    name: name,
+    motor: motor,
+    startDate: startDate,
     status: status,
     action: 'View'
   };

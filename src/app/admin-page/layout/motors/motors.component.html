@@ -1,1 +1,67 @@
-<p>motors works!</p>
+<body>
+  <div class="header">
+    <header>MOTORS</header>
+    <div class="filter-container">
+      <mat-form-field>
+        <mat-label>Search</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Maia" #input>
+      </mat-form-field>
+    </div>
+</div>
+   
+    
+    <div class="table-container mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort>
+    
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+          <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="model">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Model</th>
+          <td mat-cell *matCellDef="let row">{{ row.model }}</td>
+        </ng-container>
+    
+        <!-- Motor Column -->
+        <ng-container matColumnDef="brand">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Brand</th>
+          <td mat-cell *matCellDef="let row">{{ row.brand }}</td>
+        </ng-container>
+    
+        <!-- Start Date Column -->
+        <ng-container matColumnDef="motorRegNo">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Motor Reg No.</th>
+          <td mat-cell *matCellDef="let row">{{ row.motorRegNo }}</td>
+        </ng-container>
+    
+        <!-- Status Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+          <td mat-cell *matCellDef="let row">{{ row.status }}</td>
+        </ng-container>
+    
+        <!-- Action Column -->
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef>Action</th>
+          <td mat-cell *matCellDef="let row">  <p-button label="DELETE" severity="danger"/></td>
+
+          <td mat-cell *matCellDef="let row">  <p-button label="EDIT" severity="secondary"/></td>
+          <td mat-cell *matCellDef="let row">  <p-button label="UPLOAD" /></td> 
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="6">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+    
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    </div>
+    
+</body>
